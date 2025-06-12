@@ -302,7 +302,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SK_CatMage.ao|AS_CatMage_FarSkill_End
+      name: Appear
       takeName: SK_CatMage.ao|AS_CatMage_FarSkill_End
       internalID: -3570557977528437306
       firstFrame: 0
@@ -592,7 +592,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Appear
+      name: A
       takeName: SK_CatMage.ao|AS_CatMage_Rest02
       internalID: 8218876007726263010
       firstFrame: 0
