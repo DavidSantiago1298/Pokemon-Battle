@@ -157,11 +157,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Damage
+      name: KatDamage
       takeName: SK_CatMage.ao|AS_CatMage_Damage
       internalID: 2500711419804145272
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 11
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -215,7 +215,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Attack_1
+      name: KatAttack_1
       takeName: SK_CatMage.ao|AS_CatMage_Encount
       internalID: 6996531462151660411
       firstFrame: 0
@@ -302,7 +302,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Appear
+      name: KatAppear
       takeName: SK_CatMage.ao|AS_CatMage_FarSkill_End
       internalID: -3570557977528437306
       firstFrame: 0
@@ -476,7 +476,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Attack_2
+      name: KatAttack_2
       takeName: SK_CatMage.ao|AS_CatMage_JumpEnd
       internalID: -4895183912149317918
       firstFrame: 0
@@ -737,7 +737,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SK_CatMage.ao|AS_CatMage_SleepStart
+      name: Kat_Death
       takeName: SK_CatMage.ao|AS_CatMage_SleepStart
       internalID: -2268971828046422817
       firstFrame: 0

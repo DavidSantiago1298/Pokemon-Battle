@@ -186,7 +186,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: GrizzAttack_2
+      name: kk
       takeName: SK_ElecPanda.ao|AS_ElecPanda_Deforest
       internalID: 5799742040563852242
       firstFrame: 0
@@ -447,7 +447,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SK_ElecPanda.ao|AS_ElecPanda_Hikkaki_Action_01
+      name: GrizzAttack_2
       takeName: SK_ElecPanda.ao|AS_ElecPanda_Hikkaki_Action_01
       internalID: -8831821215782241560
       firstFrame: 0
@@ -1056,7 +1056,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SK_ElecPanda.ao|AS_ElecPanda_SleepStart
+      name: GrizzDeath
       takeName: SK_ElecPanda.ao|AS_ElecPanda_SleepStart
       internalID: -4184602383785384458
       firstFrame: 0

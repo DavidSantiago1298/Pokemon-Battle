@@ -17,9 +17,11 @@ MonoBehaviour:
     maxDamage: 30
     attackTime: 2
     animationName: Attack_1
+    soundName: KatAttack_1
     particlesPrefab: {fileID: 0}
   - minDamage: 20
     maxDamage: 60
     attackTime: 1
     animationName: Attack_2
+    soundName: KatAttack_2
     particlesPrefab: {fileID: 0}
