@@ -21,6 +21,9 @@ public class Attacks : ScriptableObject
 
 public class Attack
 {
+
+    public string attackName;
+    
     public float minDamage;
 
     public float maxDamage;
@@ -30,6 +33,8 @@ public class Attack
     public string animationName;
 
     public string soundName;
+
+    public GameObject hitparticlesPrefab;
 
     public GameObject particlesPrefab;
 }

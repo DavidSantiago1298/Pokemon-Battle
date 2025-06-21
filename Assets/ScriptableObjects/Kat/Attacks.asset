@@ -13,15 +13,23 @@ MonoBehaviour:
   m_Name: Attacks
   m_EditorClassIdentifier: 
   attacks:
-  - minDamage: 10
-    maxDamage: 30
+  - attackName: 
+    minDamage: 30
+    maxDamage: 100
     attackTime: 2
-    animationName: Attack_1
-    soundName: KatAttack_1
-    particlesPrefab: {fileID: 0}
-  - minDamage: 20
-    maxDamage: 60
-    attackTime: 1
-    animationName: Attack_2
-    soundName: KatAttack_2
-    particlesPrefab: {fileID: 0}
+    animationName: KatAttack_1
+    soundName: Kat_Attack1
+    hitparticlesPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
+      type: 3}
+    particlesPrefab: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198,
+      type: 3}
+  - attackName: 
+    minDamage: 50
+    maxDamage: 120
+    attackTime: 2
+    animationName: KatAttack_2
+    soundName: Kat_Attack2
+    hitparticlesPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
+      type: 3}
+    particlesPrefab: {fileID: 4772634663576830964, guid: e1385af346f4e624eb313ec1ea4fcd7e,
+      type: 3}
