@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using Unity.VisualScripting.FullSerializer.Internal.Converters;
 
 public class BattleManager : MonoBehaviour
 {
@@ -10,33 +11,32 @@ public class BattleManager : MonoBehaviour
     private int _numberOffFighters = 2;
 
     [SerializeField]
-    private UnityEvent _onFightersReady;
-
+    private UnityEvent _onBattleStopped;
+    
     [SerializeField]
     private UnityEvent _onBattleFinished;
 
     [SerializeField]
-
     private UnityEvent _onBattleStarted;
     private List<Fighter> _fighters = new List<Fighter>();
-
     private Coroutine _battleCoroutine;
-
-    private DamageTarget _damageTarget = new DamageTarget()
-;
+    private DamageTarget _damageTarget = new DamageTarget();
     public void AddFighter(Fighter fighter)
     {
         _fighters.Add(fighter);
         CheckFighters();
     }
-
     public void RemoveFighter(Fighter fighter)
     {
         _fighters.Remove(fighter);
-        if (_battleCoroutine != null)
+        if (_fighters.Count < 2)
         {
-            StopCoroutine(_battleCoroutine);
-            _battleCoroutine = null;
+            if (_battleCoroutine != null)
+            {
+                StopCoroutine(_battleCoroutine);
+                _battleCoroutine = null;
+            }
+            _onBattleStopped?.Invoke();
         }
     }
     private void CheckFighters()
@@ -45,8 +45,7 @@ public class BattleManager : MonoBehaviour
         {
             return;
         }
-        _onFightersReady?.Invoke();
-        StartBattle();
+        _onBattleStarted?.Invoke();
     }
 
     public void StartBattle()
@@ -57,10 +56,8 @@ public class BattleManager : MonoBehaviour
         }
         _battleCoroutine = StartCoroutine(BattleCoroutine());
     }
-
     private IEnumerator BattleCoroutine()
     {
-        _onBattleStarted?.Invoke();
         while (_fighters.Count > 1)
         {
             Fighter attacker = _fighters[Random.Range(0, _fighters.Count)];
@@ -84,7 +81,7 @@ public class BattleManager : MonoBehaviour
             defender.Health.TakeDamage(_damageTarget); 
             if (defender.Health.CurrentHealth <= 0)
             {
-                _fighters.Remove(defender);
+               RemoveFighter(defender);
             }
             yield return new WaitForSeconds(1f);
         }

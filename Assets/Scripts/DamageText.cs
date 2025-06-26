@@ -10,7 +10,7 @@ public class DamageText : MonoBehaviour
     private Text _text;
 
     [SerializeField]
-    private string _showAnimationName = "Damage";
+    private string _showAnimationName = "ShowDamageText";
 
     public void ShowDamageText(DamageTarget damageTarget)
     {

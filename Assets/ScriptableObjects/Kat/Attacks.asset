@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacks:
   - attackName: 
-    minDamage: 30
-    maxDamage: 100
+    minDamage: 20
+    maxDamage: 40
     attackTime: 2
     animationName: KatAttack_1
     soundName: Kat_Attack1
@@ -24,8 +24,8 @@ MonoBehaviour:
     particlesPrefab: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198,
       type: 3}
   - attackName: 
-    minDamage: 50
-    maxDamage: 120
+    minDamage: 10
+    maxDamage: 30
     attackTime: 2
     animationName: KatAttack_2
     soundName: Kat_Attack2
