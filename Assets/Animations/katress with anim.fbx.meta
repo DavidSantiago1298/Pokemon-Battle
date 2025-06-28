@@ -273,7 +273,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SK_CatMage.ao|AS_CatMage_FarSkill_ActionLoop
+      name: Katt_win
       takeName: SK_CatMage.ao|AS_CatMage_FarSkill_ActionLoop
       internalID: -2978284661834592243
       firstFrame: 0

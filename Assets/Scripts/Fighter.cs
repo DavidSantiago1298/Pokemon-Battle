@@ -5,6 +5,10 @@ using UnityEngine.Events;
 public class Fighter : MonoBehaviour
 {
     [SerializeField]
+    private string  _name;
+    public string Name => _name;
+    
+    [SerializeField]
     private Attacks _attacks;
 
     [SerializeField]
@@ -24,8 +28,17 @@ public class Fighter : MonoBehaviour
     public Animator CharacterAnimator => _characterAnimator;
 
     [SerializeField]
-
     private UnityEvent _onFigtherInitialized;
+
+    [SerializeField]
+    private string _winAnimationName = "win";
+
+    public string WinAnimationName => _winAnimationName;
+
+    [SerializeField]
+    private string _winSoundName = "winSound";
+
+    public string WinSoundName => _winSoundName;
 
     public void InitializeFighter()
     {
