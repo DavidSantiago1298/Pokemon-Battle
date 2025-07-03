@@ -1054,7 +1054,7 @@ Transform:
   m_GameObject: {fileID: 613086615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.498, y: 0.001, z: 0.979}
+  m_LocalPosition: {x: 0.3236, y: 0.001, z: 0.979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1461,11 +1461,11 @@ MonoBehaviour:
   _timerDataList:
   - sprite: {fileID: 21300000, guid: 9dc08318b2e5a6a4fb443e9d72c3c4e9, type: 3}
     soundName: Go
-  - sprite: {fileID: 21300000, guid: 7b968875ce834d149877a55e18fc1351, type: 3}
+  - sprite: {fileID: 21300000, guid: 58297aa0f55c77646a269b46cb6f9fa5, type: 3}
     soundName: 3
   - sprite: {fileID: 21300000, guid: bc6d6bd6ca8cf8243b4e12046661d02a, type: 3}
     soundName: 2
-  - sprite: {fileID: 21300000, guid: 58297aa0f55c77646a269b46cb6f9fa5, type: 3}
+  - sprite: {fileID: 21300000, guid: 7b968875ce834d149877a55e18fc1351, type: 3}
     soundName: 1
   _animationName: TimerShowSeconds
   _onTimerEnd:
