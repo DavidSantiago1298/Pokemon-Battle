@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: Attacks
   m_EditorClassIdentifier: 
   attacks:
-  - attackName: 
+  - attackName: Curse
     minDamage: 20
     maxDamage: 40
     attackTime: 2
     animationName: KatAttack_1
     soundName: Kat_Attack1
-    hitparticlesPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
+    hitParticlesPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
       type: 3}
     particlesPrefab: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198,
       type: 3}
-  - attackName: 
+  - attackName: Magic strike
     minDamage: 10
     maxDamage: 30
     attackTime: 2
     animationName: KatAttack_2
     soundName: Kat_Attack2
-    hitparticlesPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
+    hitParticlesPrefab: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af,
       type: 3}
-    particlesPrefab: {fileID: 4772634663576830964, guid: e1385af346f4e624eb313ec1ea4fcd7e,
+    particlesPrefab: {fileID: 7226888052703040409, guid: 7ec363c8df426644ea85f8d6d570561c,
       type: 3}

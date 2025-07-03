@@ -244,11 +244,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Damage
+      name: Mossa_Damage
       takeName: SK_GrassPanda.ao|AS_GrassPanda_Damage
       internalID: 882031481383395092
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 16
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -273,7 +273,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Attack_2
+      name: MossaAttack_2
       takeName: SK_GrassPanda.ao|AS_GrassPanda_Deforest
       internalID: -3616977496743304347
       firstFrame: 0
@@ -331,7 +331,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SK_GrassPanda.ao|AS_GrassPanda_Encount
+      name: Mossa_Win
       takeName: SK_GrassPanda.ao|AS_GrassPanda_Encount
       internalID: -7211971977560869678
       firstFrame: 0
@@ -342,7 +342,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -563,7 +563,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle
+      name: Mossa_Idle
       takeName: SK_GrassPanda.ao|AS_GrassPanda_Idle
       internalID: 7828565088804839949
       firstFrame: 0
@@ -650,7 +650,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Attack_1
+      name: MossaAttack_1
       takeName: SK_GrassPanda.ao|AS_GrassPanda_MusclePunch_End
       internalID: -7766389923899525753
       firstFrame: 8
@@ -737,7 +737,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SK_GrassPanda.ao|AS_GrassPanda_Petting
+      name: Mossa_Lose
       takeName: SK_GrassPanda.ao|AS_GrassPanda_Petting
       internalID: -2497019380248690635
       firstFrame: 0
@@ -969,7 +969,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: SK_GrassPanda.ao|AS_GrassPanda_SleepStart
+      name: Mossa_Death
       takeName: SK_GrassPanda.ao|AS_GrassPanda_SleepStart
       internalID: 784933915922061573
       firstFrame: 0

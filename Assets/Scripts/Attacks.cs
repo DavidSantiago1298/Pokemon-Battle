@@ -34,7 +34,7 @@ public class Attack
 
     public string soundName;
 
-    public GameObject hitparticlesPrefab;
+    public GameObject hitParticlesPrefab;
 
     public GameObject particlesPrefab;
 }

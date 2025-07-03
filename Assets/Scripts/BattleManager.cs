@@ -2,60 +2,76 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
-using Unity.VisualScripting.FullSerializer.Internal.Converters;
-using UnityEngine.UIElements;
 
 public class BattleManager : MonoBehaviour
 {
-
     [SerializeField]
-    private int _numberOffFighters = 2;
-
+    private int _numberOfFighters = 2;
     [SerializeField]
     private UnityEvent _onBattleStopped;
-
     [SerializeField]
     private UnityEvent _onBattleFinished;
-
     [SerializeField]
     private UnityEvent _onBattleStarted;
+
+    [SerializeField]
+    private UnityEvent _onFighterFound;
+
+    [SerializeField]
+    private UnityEvent _onFighterLost;
+
     private List<Fighter> _fighters = new List<Fighter>();
     private Coroutine _battleCoroutine;
     private DamageTarget _damageTarget = new DamageTarget();
     public void AddFighter(Fighter fighter)
     {
-        MessageFrame.Instance.ShowMessage($"{fighter.name} has joined thebattle!");
+        _onFighterFound?.Invoke();
+        MessageFrame.Instance.ShowMessage($"{fighter.Name} has joined the battle!");
         _fighters.Add(fighter);
         CheckFighters();
     }
     public void RemoveFighter(Fighter fighter)
     {
+        
         _fighters.Remove(fighter);
-        if (_fighters.Count < 2)
+        if (_fighters.Count == 0)
         {
-            if (_battleCoroutine != null)
+            _onFighterLost?.Invoke();
+        }
+        
+        if (_fighters.Count < 2)
+            {
+                StopBattle();
+            }
+    }
+    private void StopBattle()
+    {
+        if (_battleCoroutine != null)
             {
                 StopCoroutine(_battleCoroutine);
                 _battleCoroutine = null;
             }
             _onBattleStopped?.Invoke();
-        }
     }
     private void CheckFighters()
     {
-        if (_fighters.Count < _numberOffFighters)
+        if (_fighters.Count < _numberOfFighters)
         {
             return;
         }
+        StopBattle();
+        InitializeFighters();
         _onBattleStarted?.Invoke();
     }
-
-    public void StartBattle()
+    private void InitializeFighters()
     {
         foreach (Fighter fighter in _fighters)
         {
             fighter.InitializeFighter();
         }
+    }
+    public void StartBattle()
+    {
         _battleCoroutine = StartCoroutine(BattleCoroutine());
     }
     private IEnumerator BattleCoroutine()
@@ -69,7 +85,7 @@ public class BattleManager : MonoBehaviour
                 defender = _fighters[Random.Range(0, _fighters.Count)];
             }
             attacker.transform.LookAt(defender.transform);
-            defender.transform.LookAt(defender.transform);
+            defender.transform.LookAt(attacker.transform);
             Attack attack = attacker.Attacks.GetRandomAttack();
             MessageFrame.Instance.ShowMessage($"{attacker.Name} attacks with {attack.attackName}!");
             SoundManager.instance.Play(attack.soundName);
@@ -78,19 +94,18 @@ public class BattleManager : MonoBehaviour
             attackParticles.transform.SetParent(attacker.transform);
             yield return new WaitForSeconds(attack.attackTime);
             float damage = Random.Range(attack.minDamage, attack.maxDamage);
-            GameObject defendParticles = Instantiate(attack.hitparticlesPrefab, defender.transform.position, Quaternion.identity);
+            GameObject defendParticles = Instantiate(attack.hitParticlesPrefab, defender.transform.position, Quaternion.identity);
             defendParticles.transform.SetParent(defender.transform);
             _damageTarget.SetDamageTarget(damage, defender.transform);
             defender.Health.TakeDamage(_damageTarget);
             if (defender.Health.CurrentHealth <= 0)
             {
-               _fighters.Remove(defender);
+                _fighters.Remove(defender);
             }
             yield return new WaitForSeconds(1f);
         }
         EndBattle(_fighters[0]);
     }
-
     private void EndBattle(Fighter winner)
     {
         winner.transform.LookAt(Camera.main.transform);
